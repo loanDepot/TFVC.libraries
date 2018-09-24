@@ -1,5 +1,5 @@
 task UpdateLibraries {
-    $packagePath = Join-Path $ouptut, "downloads\packages"
+    $packagePath = Join-Path $Output "downloads\packages"
     New-Item -ItemType Directory -Path $packagePath -Force -ErrorAction Ignore
     Write-Verbose 'Download all packages'
 

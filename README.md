@@ -2,12 +2,6 @@
 
 Libraries for workting with TFVC source control
 
-# Git
-
-Clone this repository
-
-    git clone https://tfs/DevOps/_git/TFVC.libraries
-
 # Building
 
 Run the build script in the root of the project to install dependent modules and start the build
@@ -25,3 +19,11 @@ To just run the build, execute Invoke-Build
 Install dev version of the module on the local system after building it.
 
     Invoke-Build Install
+
+# Update libraries
+
+To update the libraries in this project, you run `Invoke-Build` with the `UpdateLibraries` task. This is not part of the CI/CD at this time.
+
+    Invoke-Build UpdateLibraries
+
+This will downloan multiple packgaes to the output folder and then pluck out the needed dlls to place in the module `lib` folder.
