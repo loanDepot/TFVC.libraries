@@ -1,6 +1,6 @@
 # TFVC.libraries
 
-Libraries for workting with TFVC source control
+Libraries for working with TFVC source control.
 
 # Building
 
