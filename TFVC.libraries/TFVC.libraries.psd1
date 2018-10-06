@@ -12,7 +12,7 @@
 RootModule = 'TFVC.libraries.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.1'
+ModuleVersion = '0.1.2'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -63,7 +63,8 @@ RequiredAssemblies = @(
     "lib\Microsoft.TeamFoundation.Build.Client.dll",
     "lib\Microsoft.TeamFoundation.Build.Common.dll",
     "lib\Microsoft.TeamFoundation.TestManagement.Client.dll",
-    'lib\Microsoft.VisualStudio.Services.Client.Interactive.dll'
+    'lib\Microsoft.VisualStudio.Services.Client.Interactive.dll',
+    'lib\Microsoft.TeamFoundation.VersionControl.Common.dll'
 )
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.
@@ -108,7 +109,7 @@ PrivateData = @{
         Tags = @('Libraries','TFVC','TFS','SourceControl')
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://www.microsoft.com/net/dotnet_library_license.htm'
 
         # A URL to the main website for this project.
         # ProjectUri = ''
