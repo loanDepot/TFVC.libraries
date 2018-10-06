@@ -1,9 +1,8 @@
-See C:\ldx\TFVC.libraries\TFVC.libraries\lib\license for licenses of individual libraries
-This license covers the scripts in this project only
-
 The MIT License (MIT)
 
-Copyright (c) 2018 loanDepot
+Copyright (c) .NET Foundation and Contributors
+
+All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
