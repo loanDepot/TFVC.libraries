@@ -2,6 +2,8 @@
 
 Libraries for working with TFVC source control.
 
+There are no exported commands in this module. These libraries are used in the TFVC module.
+
 # Building
 
 Run the build script in the root of the project to install dependent modules and start the build
