@@ -7,5 +7,5 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- script: pwsh -File .\build.ps1 tfs
-  displayName: 'Run a one-line script'
+- script: pwsh -File build.ps1 tfs
+  displayName: 'Build and Publish Module'
