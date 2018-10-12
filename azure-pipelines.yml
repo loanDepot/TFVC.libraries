@@ -3,9 +3,20 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+#resources:
+#- repo: self
+#  clean: true
+#  fetchDepth: 1
+#queue:
+#  name: Hosted VS2017
+
+
 pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
 - script: pwsh -File build.ps1 tfs
   displayName: 'Build and Publish Module'
+  env:
+    NuGetApiKey: $(NuGetApiKey)
+

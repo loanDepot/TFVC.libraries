@@ -5,7 +5,7 @@ param($Task = 'Default')
 $Script:Modules = @(
     'BuildHelpers',
     'InvokeBuild',
-    'LDModuleBuilder',
+    #'LDModuleBuilder',
     'Pester',
     'platyPS',
     'PSScriptAnalyzer'
@@ -18,7 +18,14 @@ $Script:ModuleInstallScope = 'CurrentUser'
 
 Get-PackageProvider -Name 'NuGet' -ForceBootstrap | Out-Null
 
-Update-LDModule -Name $Script:Modules -Scope $Script:ModuleInstallScope
+foreach ( $module in $Modules )
+{
+    "  Installing [$module]"
+    $install = Find-Module $module | Sort Repository | Select -First 1
+    $installed = $install | Install-Module -Force -SkipPublisherCheck -AllowClobber -AcceptLicense -Scope $Script:ModuleInstallScope
+    $installed | Import-Module
+    "    [{0}] [{1}]" -f $installed.Name,$installed.Version
+}
 
 Set-BuildEnvironment
 Get-ChildItem Env:BH*
@@ -26,7 +33,7 @@ Get-ChildItem Env:APPVEYOR*
 
 $Error.Clear()
 
-'Invoking build...'
+'Invoking build'
 
 Invoke-Build $Task -Result 'Result'
 if ($Result.Error)
