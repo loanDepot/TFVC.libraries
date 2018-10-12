@@ -1,6 +1,7 @@
 [CmdletBinding()]
 
 param($Task = 'Default')
+$ProgressPreference=’SilentlyContinue’
 
 $Script:Modules = @(
     'BuildHelpers',
@@ -24,7 +25,7 @@ foreach ( $module in $Modules )
     $install = Find-Module $module -ErrorAction Stop | Sort-Object Repository | Select-Object -First 1
     $installed = $install | Install-Module -Force -SkipPublisherCheck -AllowClobber -AcceptLicense -Scope $Script:ModuleInstallScope -ErrorAction Stop
     $installed | Import-Module -ErrorAction Stop
-    "    [{0}] [{1}]" -f $installed.Name,$installed.Version
+    $installed
 }
 
 Set-BuildEnvironment
