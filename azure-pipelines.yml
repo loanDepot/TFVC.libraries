@@ -15,7 +15,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- script: pwsh -File build.ps1 tfs
+- script: pwsh -File build.ps1 tfs,PublishModule
   displayName: 'Build and Publish Module'
   env:
     NuGetApiKey: $(NuGetApiKey)
