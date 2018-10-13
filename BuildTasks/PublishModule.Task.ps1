@@ -2,11 +2,11 @@ task PublishModule {
 
     if ( $ENV:BHBuildSystem -ne 'Unknown' -and
         $ENV:BHBranchName -eq "master" -and
-        -not [string]::IsNullOrWhiteSpace($ENV:NugetApiKey))
+        -not [string]::IsNullOrWhiteSpace($ENV:nugetapikey))
     {
         $publishModuleSplat = @{
             Path        = $Destination
-            NuGetApiKey = $ENV:NugetApiKey
+            NuGetApiKey = $ENV:nugetapikey
             Verbose     = $true
             Force       = $true
             Repository  = $PSRepository
@@ -19,7 +19,7 @@ task PublishModule {
         "Skipping deployment: To deploy, ensure that...`n" +
         "`t* You are in a known build system (Current: $ENV:BHBuildSystem)`n" +
         "`t* You are committing to the master branch (Current: $ENV:BHBranchName) `n" +
-        "`t* The repository APIKey is defined in `$ENV:NugetApiKey (Current: $(![string]::IsNullOrWhiteSpace($ENV:NugetApiKey))) `n" +
+        "`t* The repository APIKey is defined in `$ENV:nugetapikey (Current: $(![string]::IsNullOrWhiteSpace($ENV:nugetapikey))) `n" +
         "`t* This is not a pull request"
     }
 }

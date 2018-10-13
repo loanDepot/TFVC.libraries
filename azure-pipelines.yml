@@ -22,5 +22,5 @@ steps:
 - script: pwsh -File build.ps1 Publish
   displayName: 'Build and Publish Module'
   env:
-    NuGetApiKey: $(NuGetApiKey)
+    nugetapikey: $(nugetapikey)
 
