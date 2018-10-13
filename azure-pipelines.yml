@@ -15,15 +15,12 @@ trigger:
     include:
       - master
 
-resources:
-- repo: self
-  clean: true
-  fetchDepth: 1
-queue:
-  name: Hosted VS2017
+pool:
+  vmImage: 'Ubuntu 16.04'
+
 steps:
-- powershell: build.ps1
-  displayName: ScriptBuild
+- script: pwsh -File build.ps1 Publish
+  displayName: 'Build and Publish Module'
   env:
     NuGetApiKey: $(NuGetApiKey)
 
