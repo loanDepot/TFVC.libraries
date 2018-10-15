@@ -12,7 +12,7 @@
 RootModule = 'TFVC.libraries.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.4'
+ModuleVersion = '0.1.5'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -30,7 +30,7 @@ CompanyName = 'loanDepot'
 Copyright = '(c) 2018 loanDepot. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Libraries for workting with TFVC source control'
+Description = 'Libraries for working with TFVC source control'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '5.0'
@@ -109,10 +109,10 @@ PrivateData = @{
         Tags = @('Libraries','TFVC','TFS','SourceControl')
 
         # A URL to the license for this module.
-        LicenseUri = 'https://www.microsoft.com/net/dotnet_library_license.htm'
+        LicenseUri = 'https://github.com/loanDepot/TFVC.libraries/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/loanDepot/TFVC.libraries'
 
         # A URL to an icon representing this module.
         # IconUri = ''

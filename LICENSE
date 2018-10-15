@@ -1,5 +1,12 @@
-See .\TFVC.libraries\TFVC.libraries\lib\license for licenses of individual libraries
-This license covers the scripts in this project only
+This PowerShell module may incorporate components from the projects listed
+below. Microsoft licenses these components under the Microsoft .NET Library
+software license terms. The original copyright notices and the licenses under
+which Microsoft received such components are set forth below for informational
+purposes only. Microsoft reserves all rights not expressly granted herein,
+whether by implication, estoppel or otherwise.
+
+1.	.NET Core (https://github.com/dotnet/core/)
+
 
 The MIT License (MIT)
 
