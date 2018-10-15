@@ -13,7 +13,9 @@ task PublishModule {
             ErrorAction = 'Stop'
         }
         "Files in module output:"
-        Get-ChildItem $Destination | % fullpath
+        Get-ChildItem $Destination -Recurse -File |
+            Select-Object -Expand FullPath
+
         "Publishing [$Destination] to [$PSRepository]"
 
         Publish-Module @publishModuleSplat
