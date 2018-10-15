@@ -14,7 +14,7 @@ task PublishModule {
         }
         "Files in module output:"
         Get-ChildItem $Destination -Recurse -File |
-            Select-Object -Expand FullPath
+            Select-Object -Expand FullName
 
         "Publishing [$Destination] to [$PSRepository]"
 
