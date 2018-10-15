@@ -12,6 +12,10 @@ task PublishModule {
             Repository  = $PSRepository
             ErrorAction = 'Stop'
         }
+        "Files in module output:"
+        Get-ChildItem $Destination | % fullpath
+        "Publishing [$Destination] to [$PSRepository]"
+
         Publish-Module @publishModuleSplat
     }
     else
